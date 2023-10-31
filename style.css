@@ -10,8 +10,7 @@ body {
     align-items: center;
     min-height: 900px;
     background: url('010.jpg') no-repeat center center fixed;
-    background-size: cover;
-    background-position: center;
+    background-size: 100% auto;
     background-repeat: no-repeat;
 }
 
@@ -68,18 +67,18 @@ form {
     border-radius: 0px;
 }
 
-/* Mobile view */
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
+    /* Apply responsive styles for screens up to 768px wide */
     body {
-       background-position: center;
+        flex-direction: column;
+        align-items: center;
     }
-   }
-   
-   /* Desktop view */
-   @media only screen and (min-width: 769px) {
-    body {
-       background-attachment: fixed;
+
+    #tipcalculation {
+        padding: 20px;
     }
-   }
 
-
+    form {
+        grid-template-columns: 1fr;
+    }
+}
